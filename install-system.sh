@@ -35,17 +35,13 @@ else
 fi
 
 if [ "$flash" = true ]; then
-    sudo add-apt-repository "deb http://archive.canonical.com/ $(lsb_release -sc) partner"
+    pacman -S --needed flashplayer
 fi
-sudo apt-get update
 
-sudo apt-get install -y firefox htop git python-dev libxml2-dev libxslt-dev libffi-dev libssl-dev build-essential libboost-python-dev libleveldb-dev libjpeg-dev curl wget git bash vim
-
-# For some versions of ubuntu, the package libleveldb1v5 isn't available. Use libleveldb1 instead.
-sudo apt-get install -y libleveldb1v5 || sudo apt-get install -y libleveldb1
-
+yes | sudo pacman -S --needed firefox htop git python libxml2 libxslt libffi openssl base-devel boost leveldb libjpeg curl wget bash vim
+ 
 if [ "$flash" = true ]; then
-    sudo apt-get install -y adobe-flashplugin
+    yes | sudo pacman -S --needed flashplugin
 fi
 
 # Use the Unbranded build that corresponds to a specific Firefox version (source: https://wiki.mozilla.org/Add-ons/Extension_Signing#Unbranded_Builds)
