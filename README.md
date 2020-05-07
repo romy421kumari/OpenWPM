@@ -526,9 +526,9 @@ Troubleshooting
   This error indicates that Firefox exited during startup (or was prevented from
   starting). There are many possible causes of this error:
 
-  * If you are seeing this error for all browser spawn attempts check that:
+  * If you are seeing this error for all browsers spawn attempts check that:
     * Both selenium and Firefox are the appropriate versions. Run the following
-      commands and check that the versions output match the required versions in
+      commands and check that the version output match the required versions in
       `install.sh` and `requirements.txt`. If not, re-run the install script.
       ```sh
       cd firefox-bin/
