@@ -192,7 +192,7 @@ available [below](#output-format).
           viewport screenshot at each location. This method will save the parts
           and a stitched version in the `screenshot_path`.
         * Since the screenshots are stitched they have some limitations:
-            * On the area of the page present when the command is called will
+            * In the area of the page present when the command is called will
               be captured. Sites which dynamically expand when scrolled (i.e.,
               infinite scroll) will only go as far as the original height.
             * We only scroll vertically, so pages that are wider than the
